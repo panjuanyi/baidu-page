@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+.nav{
+    margin: 20px 7px 0px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .nav-right,.nav .nav-left{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav .nav-right li,.nav .nav-left li{
+    margin: 0 7px ;
+    width: 40px;
+    font: 13px/23px Arial,sans-serif;
+    text-align: center;
+}
+
+.nav .nav-left li:hover>a{
+    color: #4e6ef2;
+}
+
+.nav .nav-left .more-list{
+    position:absolute;
+    width: 228px;
+    height: 298px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    z-index: 10;
+    display: none;
+}
+
+.nav .nav-left .more:hover+.more-list,
+.nav .nav-left .more-list:hover{
+    display: flex;
+}
+
+.nav .nav-left .more-list a{
+    display: block;
+    padding: 4px;
+    flex: 0 1 25%;
+    /* ？？？？不是应该33.3%吗？？？ */
+    text-align:center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.nav .nav-left .more-list a:hover{
+    background-color: #f1f3fd;
+}
+
+.nav .nav-left .more-list a:hover img{
+    box-shadow: 0 0 1px 1px #eee;
+}
+
+.nav .nav-left .more-list img{
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 4px auto;
+    /* border: 1px solid #eee; */
+    box-shadow: 0 0 2px  #eee;
+    border-radius: 4px;
+
+}
+
+.nav-right li:nth-child(2){
+    background-color: #4e6ef2;
+    border-radius: 5px;
+}
+
+.nav-right li:nth-child(2) a{
+color: #fff;
+}
+/* nav部分结束 */
+
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.wrap .logo {
+    display: block;
+    width: 270px;
+    margin: 0 auto;
+}
+/* .logo部分结束 */
+
+.search{
+    width: 654px;
+    height: 44px;
+    margin: 10px auto;
+    display: flex;
+    position: relative;
+}
+
+.search-area{
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 550px;
+    height: 40px;
+    padding: 0 0 0 6px;
+}
+
+
+.search-area:hover{
+    border: 2px solid #aaa;
+}
+
+.search-area.active{
+    border: 2px solid #4e6ef2;
+}
+
+.search-area:focus,
+.search-area:hover,
+.search-area:active{
+    border: 2px solid #4e6ef2;
+}
+/* 这里，鼠标移出之后，边框变色效果就没了？？？ */
+
+
+.search-area .search-text{
+    position: absolute;
+    width: 411px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0
+}
+
+
+.search-area .voice-search{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 50px;
+    right: 0;
+    width: 24px;
+    height: 20px;
+    background: url(../img/nicon-2x-6258e1cf13.png) no-repeat;
+    background-size: 24px;
+    background-position: 0 1%;
+}
+
+.search-area .voice-search:hover{
+    background: url(../img/nicon-2x-6258e1cf13.png) no-repeat 0 32%;
+    background-size: 24px;
+}
+
+.search-area .picture-search{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 20px;
+    right: 0px;
+    width: 24px;
+    height: 20px;
+    background: url(../img/nicon-2x-6258e1cf13.png) no-repeat;
+    background-size: 24px;
+    background-position: 0 65%;
+}
+
+.search-area .picture-search:hover{
+    background: url(../img/nicon-2x-6258e1cf13.png) no-repeat 0 96%;
+    background-size: 24px;
+}
+
+.search-submit{
+    float: right;
+    position: relative;
+    right: 10px;
+    font-size: 18px;
+    color: #fff;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 20px;
+    /* border: 2px solid #4e6ef2; */
+    border-radius: 0 8px 8px 0;
+    background-color: #4e6ef2;
+}
+
+.search-submit:hover{
+    background-color: #4662d9;
+}
+
+/* search部分结束 */
+
+.hot-search{
+    margin: 50px auto 0;
+    width: 644px;
+}
+
+.hot-search-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hot-search-header .title h2{
+    font-size: 14px;
+}
+
+.hot-search-header .title:hover h2,
+.hot-search-header .title:hover i{
+    color: #4e6ef2;
+}
+
+.hot-search-header .icon-arrow-right,
+.hot-search-header .change-list{
+    color: #777;
+    font-size: 14px;
+}
+
+.hot-search-header .icon-refresh{
+    position: relative;
+    display: inline-block;
+    transform:rotate(30deg);
+}
+
+.hot-search-header .change-list:hover span,
+.hot-search-header .change-list:hover i{
+    color: #4e6ef2;
+}
+
+/* hot-search标题栏结束 */
+
+.hot-search .news-list ul{
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.hot-search .news-list li{
+    margin-right: 10px;
+    flex: 0 0 33%;
+    width: 50%;
+}
+
+.hot-search .news-list li:hover span{
+    color: #4e6ef2;
+    text-decoration: underline;
+}
+
+.hot-search .news-list li a,
+.hot-search .news-list li i,
+.hot-search .news-list li span{
+    display: block;
+}
+
+.hot-search .news-list li a{
+    /* width: 322px */
+    display: flex;
+    flex: 1;
+    min-width: 0;
+
+}
+
+
+.hot-search .news-list li .news-number{
+    position: relative;
+    display: block;
+    font-weight: bold;
+    width: 22px;
+    color: #777;
+}
+
+.hot-search .news-list li .icon-top{
+    left: -4px;
+    font-weight: bold;
+    color: #c00;
+}
+
+.hot-search .news-list li:nth-child(2) .news-number{
+    color: #fe2d46;
+}
+
+.hot-search .news-list li:nth-child(3) .news-number{
+    color: #f60;
+}
+
+.hot-search .news-list li:nth-child(4) .news-number{
+    color: #faa90e;
+}
+
+.hot-search .news-list li .news{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.hot-search .news-list li .tag{
+    margin-left: 5px;
+    color: #fff;
+    font-size: 12px;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    padding: 2px;
+    border-radius: 2px;
+    align-self: center;
+
+}
+
+.hot-search .news-list li .boil{
+    background: #c00;
+}
+
+.hot-search .news-list li .hot{
+    background: #f60;
+}

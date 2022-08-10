@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body,div,ul,li,h1,h2,h3,h4{
+    padding: 0;
+    margin: 0;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+    display: block;
+}
+
+i,em{
+    font-style: normal;
+}
+
+img{
+    border: none;
+    vertical-align: middle;
+}
+
+input,button,a{
+    outline: none;
+    border: none;
+}
