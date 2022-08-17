@@ -88,7 +88,7 @@ color: #fff;
     margin: 0 auto;
 }
 
-.wrap .logo {
+.wrap>a,.wrap .logo {
     display: block;
     width: 270px;
     margin: 0 auto;
@@ -121,12 +121,11 @@ color: #fff;
     border: 2px solid #4e6ef2;
 }
 
-.search-area:focus,
+.search-area:focus-within,
 .search-area:hover,
 .search-area:active{
     border: 2px solid #4e6ef2;
 }
-/* 这里，鼠标移出之后，边框变色效果就没了？？？ */
 
 
 .search-area .search-text{
