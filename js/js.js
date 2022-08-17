@@ -1,10 +1,12 @@
 
 window.onload=function(){
-    let searchBtn=getElementsByClassName('search-submit')
-    searchBtn.onclick=openSearch(e)
+    let searchBtn=document.querySelector('.search-submit');
+    searchBtn.onclick=function (){openSearch()
+    };
 }
 
-function openSearch(e){
-    let e=document.getElementsByClassName('search-text').innerhtml;
+function openSearch(){
+    let e=document.querySelector('.search-text').value;
+
     window.open('https://www.baidu.com/s?wd='+e)
 }
