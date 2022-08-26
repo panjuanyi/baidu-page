@@ -7,6 +7,5 @@ window.onload=function(){
 
 function openSearch(){
     let e=document.querySelector('.search-text').value;
-
     window.open('https://www.baidu.com/s?wd='+e)
 }

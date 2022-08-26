@@ -117,9 +117,7 @@ color: #fff;
     border: 2px solid #aaa;
 }
 
-.search-area.active{
-    border: 2px solid #4e6ef2;
-}
+
 
 .search-area:focus-within,
 .search-area:hover,
@@ -136,7 +134,58 @@ color: #fff;
     font-size: 16px;
     top: 0;
     bottom: 0;
-    margin: auto 0
+    margin: auto 0;
+    padding:0 6px
+}
+
+.search-clear{
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    right: 80px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding-right:8px ;
+    border-right:1px solid #eee;
+    cursor: pointer;
+    display: none;
+    /* 后续js修改display */
+}
+
+.search-sub-list{
+    position: absolute;
+    border: 2px solid #4e6ef2;
+    border-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #fff;
+    top:34px;
+    /* 重叠遮盖区域的高度40-34=6px */
+    left:-2px;
+    width: 530px;
+    z-index: 10;
+    /* display:none */
+}
+
+.search-sub-list .associate-list{
+    position: relative;
+    margin: 6px 12px;
+    padding: 6px 0 4px 0;
+    border-top:2px solid #eee;
+    
+}
+
+
+
+.search-sub-list .feedback{
+    /* position: absolute; */
+    right: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    text-align: end;
+    color: #999;
+
 }
 
 
