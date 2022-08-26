@@ -185,8 +185,12 @@ color: #fff;
     font-size: 13px;
     text-align: end;
     color: #999;
-
 }
+
+.search-sub-list .feedback:hover{
+    color: #4e6ef2;
+}
+
 
 
 .search-area .voice-search{
