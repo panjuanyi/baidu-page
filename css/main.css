@@ -165,7 +165,8 @@ color: #fff;
     left:-2px;
     width: 530px;
     z-index: 10;
-    /* display:none */
+    display:none
+    /* 后续js修改display */
 }
 
 .search-sub-list .associate-list{
