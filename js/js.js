@@ -45,7 +45,8 @@ function openSubList(){
     let searchClear=getByClass('.search-clear')
     let ssl=getByClass('.search-sub-list');
 
-    oSearchText.onfocus=function(){
+    // 输入事件
+    oSearchText.oninput=function(){
         if(oSearchText.value.length==0)
         {
             searchClear.style.display = "none";
@@ -57,7 +58,8 @@ function openSubList(){
             }
     }    
 
-    oSearchText.onblur=function(){
+    // 失焦事件
+    oSearchText.onchange=function(){
         ssl.style.display = "none";
         if(oSearchText.value.length==0)
         {
