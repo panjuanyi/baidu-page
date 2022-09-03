@@ -37,15 +37,13 @@ function bdSearch(){
     window.open('https://www.baidu.com/s?wd='+kw)
 }
 
-// 判定文本框内内容，确定展开下拉菜单
-
-
+// 判定文本框内内容，确定展开下拉菜单及清除键
 function openSubList(){
     let oSearchText=getByClass('.search-text')
     let searchClear=getByClass('.search-clear')
     let ssl=getByClass('.search-sub-list');
 
-    // 输入事件
+    // 搜素框输入事件
     oSearchText.oninput=function(){
         if(oSearchText.value.length==0)
         {
@@ -58,7 +56,7 @@ function openSubList(){
             }
     }    
 
-    // 失焦事件
+    // 搜索框失焦事件
     oSearchText.onchange=function(){
         ssl.style.display = "none";
         if(oSearchText.value.length==0)
@@ -68,6 +66,24 @@ function openSubList(){
         else{
             searchClear.style.display = "block";
             }
+    }
+
+    //搜索框有文字且被聚焦事件
+    oSearchText.onfocus=function(){
+        if(oSearchText.value.length==0)
+        {
+            searchClear.style.display = "none";
+            ssl.style.display = "none";
+        }
+        else{
+            searchClear.style.display = "block";
+            ssl.style.display = "block";
+            }
+    }
+
+    //清除按钮作用
+    searchClear.onclick=function(){
+        oSearchText.value=null
 
     }
 
