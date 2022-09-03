@@ -41,8 +41,8 @@ function bdSearch(){
 
 
 function openSubList(){
-    let oSearchText=getByClass('search-text')
-    let searchClear=getByClass('search-clear')
+    let oSearchText=getByClass('.search-text')
+    let searchClear=getByClass('.search-clear')
     let ssl=getByClass('.search-sub-list');
 
     oSearchText.onfocus=function(){
@@ -70,7 +70,8 @@ function openSubList(){
     }
 
 
-    /* emm，设个定时器？？？
+    /* 
+    //emm，设个定时器？？？
      let timer=null;
      clearInterval (timer);
     timer=setInterval(function() {
