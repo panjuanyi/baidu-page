@@ -38,11 +38,41 @@ function bdSearch(){
 }
 
 // 判定文本框内内容，确定展开下拉菜单
-// emm，设个定时器？？？
-let timer=null;
+
 
 function openSubList(){
-    clearInterval (timer);
+    let oSearchText=getByClass('search-text')
+    let searchClear=getByClass('search-clear')
+    let ssl=getByClass('.search-sub-list');
+
+    oSearchText.onfocus=function(){
+        if(oSearchText.value.length==0)
+        {
+            searchClear.style.display = "none";
+            ssl.style.display = "none";
+        }
+        else{
+            searchClear.style.display = "block";
+            ssl.style.display = "block";
+            }
+    }    
+
+    oSearchText.onblur=function(){
+        ssl.style.display = "none";
+        if(oSearchText.value.length==0)
+        {
+            searchClear.style.display = "none";
+        }
+        else{
+            searchClear.style.display = "block";
+            }
+
+    }
+
+
+    /* emm，设个定时器？？？
+     let timer=null;
+     clearInterval (timer);
     timer=setInterval(function() {
         // 看看搜索框里的文字
         let kw=getByClass('.search-text').value;
@@ -79,4 +109,5 @@ function openSubList(){
         ssl.style.display = "block";
         }
     }, 30);
+    */
 }
